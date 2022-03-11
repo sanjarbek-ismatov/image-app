@@ -1,0 +1,27 @@
+.cont img {
+  height: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.cont img:hover {
+  transform: scale(1.07);
+}
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #747474;
+}
+
+.cont p {
+  width: 100%;
+}
+#div {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#div input {
+  width: 50%;
+}
