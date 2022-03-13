@@ -13,14 +13,17 @@
   flex-wrap: wrap;
   text-align: center;
   color: #747474;
+  justify-content: space-around;
 }
-
+.cont div {
+  width: 430px;
+}
 .cont p {
   width: 100%;
 }
 #div {
   justify-content: center;
-  margin-bottom: 50px;
+  margin: 50px auto;
 }
 #div input {
   width: 50%;
@@ -33,12 +36,11 @@
   padding: 50px 0px;
 }
 .load {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  border: 7px solid #fff;
-  border-top-color: #0e2053;
-  animation: rotate 1s infinite ease;
+  height: 150px;
+  animation: rotate 0.5s infinite linear;
+}
+.not-load {
+  display: none;
 }
 @keyframes rotate {
   from {
@@ -48,5 +50,12 @@
     transform: rotate(360deg);
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 900px) {
+  #div input {
+    width: 100%;
+  }
+  .cont img {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -3,7 +3,7 @@ function Objects(props) {
   obj = props.list.results.map((element) => (
     <>
       <div>
-        <img src={element.links.download} />
+        <img className="img-responsive" src={element.links.download} />
         <p>{element.alt_description}</p>
       </div>
     </>

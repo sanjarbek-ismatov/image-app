@@ -4,6 +4,8 @@ import Objects from "./objects";
 import "./objects.css";
 function Search() {
   const fetchData = () => {
+    setLoad("load");
+
     if (text !== "") {
       fetch(api)
         .then((res) => res.json())
@@ -11,14 +13,19 @@ function Search() {
           setList(dat);
         });
     }
+    setTimeout(() => {
+      setLoad("not-load");
+    }, 4000);
   };
   const [text, setText] = useState();
   const key = "nKnKTDLfF-u8ty8Dvdqqkpg1TIYjQBxp91oG08Cel_k";
   const api = `https://api.unsplash.com/search/photos?page=1&query=${text}&client_id=${key}`;
   const [list, setList] = useState();
+  const [load, setLoad] = useState("not-load");
+
   return (
     <>
-      <div className="container ">
+      <div className="container-fluid">
         <h1 className="text-center text-primary display-1">Image App</h1>
         <div id="div" className="d-flex">
           <input
@@ -40,11 +47,12 @@ function Search() {
           </button>
         </div>
         <div className="loading">
-          <div className="load"></div>
+          <img className={load} src="./loading.png" />
         </div>
         {list !== undefined ? <Objects list={list} /> : ""}
       </div>
     </>
   );
 }
+
 export default Search;
