@@ -25,3 +25,28 @@
 #div input {
   width: 50%;
 }
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+.load {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  border-top-color: #0e2053;
+  animation: rotate 1s infinite ease;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 400px) {
+}
