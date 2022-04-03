@@ -1,12 +1,13 @@
-.cont img {
-  height: 300px;
+.img-responsive {
+  /* height: 300px; */
+  width: 400px;
+  height: auto;
   padding: 10px;
   border-radius: 20px;
-  transition-duration: 0.3s;
   cursor: pointer;
 }
-.cont img:hover {
-  transform: scale(1.07);
+.img-responsive:hover {
+  filter: grayscale(50);
 }
 .cont {
   display: flex;
@@ -42,6 +43,21 @@
 .not-load {
   display: none;
 }
+.download {
+  padding: 10px 20px;
+  background-color: rgb(34, 34, 189);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  position: relative;
+  bottom: -200px;
+  z-index: 1;
+  opacity: 0;
+}
+.download-hov {
+  opacity: 1;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
